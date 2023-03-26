@@ -61,6 +61,8 @@ public class GroupByActivity {
          */
         String sql = FileUtil.parseSQLFile("problem1.sql");
 
+        sql = "SELECT artist, COUNT(song) FROM song GROUP BY artist;";
+
         Map<String, Integer> counts = new HashMap<>();
         try {
             Connection connection = ConnectionUtil.getConnection();
